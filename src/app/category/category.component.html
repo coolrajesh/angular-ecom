@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-lg-12">
+      <!-- ==================================-->
+      <!-- ======= General Button ===== -->
+      <!-- ==================================-->
+      <div class="card">
+        <div class="p-3">
+          <h4 class="card-title mb-0">General Buttons</h4>
+        </div>
+        <div class="card-body border-top">
+          <ngx-datatable class='bootstrap no-detail-row' [columnMode]="'force'" [footerHeight]="50" [rowHeight]="'auto'"    
+          [rows]='rows' [count]="total_count" [limit]="rows.page_size">    
+          <ngx-datatable-column name="Title 1" prop="title_line1"></ngx-datatable-column>    
+          <ngx-datatable-column name="Title 2" prop="title_line2"></ngx-datatable-column>    
+          <ngx-datatable-column name="Type" prop="type"></ngx-datatable-column>    
+          <ngx-datatable-column name="Order No" prop="order_number"></ngx-datatable-column>    
+          <ngx-datatable-column name="Action" widht="600">    
+              <ng-template let-row="row" let-expanded="expanded" ngx-datatable-cell-template>    
+                  <div class="text-left">    
+                      <a title="Edit" class="mr-2" (click)="test('title_line1')">Edit</a>    
+                      <a title="Delete" href="javascript:void(0);"    
+                          >Delete</a>    
+                  </div>    
+              </ng-template>    
+          </ngx-datatable-column>    
+      </ngx-datatable>    
+          <div class="button-group">
+           
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
