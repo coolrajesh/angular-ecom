@@ -5,7 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { CategoryComponent } from './category.component';
+import { LockComponent} from '../../app/authentication/lock/lock.component'
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 
 const routes: Routes = [
@@ -24,6 +26,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [FormsModule, CommonModule,NgxDatatableModule, RouterModule.forChild(routes)],
-  declarations: [CategoryComponent]
+  declarations: [CategoryComponent],
+  providers: [LockComponent,NgbActiveModal,NgbModal],
+
 })
 export class CategoryModule { }

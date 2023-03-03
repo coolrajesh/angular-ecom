@@ -1,11 +1,34 @@
-<div class="auth-wrapper d-flex no-block justify-content-center align-items-center" style="background:url(assets/images/background/login-register.jpg) no-repeat center center;">
+ 
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Lock Component</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body fade">
+      
+		<form>
+			<div class="mb-3">
+				<label for="dateOfBirth">Date of birth</label>
+                
+				<div class="input-group">
+					
+					
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-dark"(click)="goBack()" >Save</button>
+	</div>
+ 
+
+<!-- <div class="auth-wrapper d-flex no-block justify-content-center align-items-center" style="background:url(assets/images/background/login-register.jpg) no-repeat center center;">
     <div class="auth-box">
         <div>
             <div class="text-center">
                 <span class="db"><img alt="thumbnail" class="rounded-circle" width="100" src="assets/images/users/user1.jpg"></span>
                 <h5 class="font-medium mb-4">Genelia</h5>
             </div>
-            <!-- Form -->
+            
             <div class="row">
                 <div class="col-12">
                     <form class="form-horizontal mt-3" action="index.html">
@@ -24,4 +47,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

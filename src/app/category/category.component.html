@@ -4,11 +4,16 @@
       <!-- ======= General Button ===== -->
       <!-- ==================================-->
       <div class="card">
-        <div class="p-3">
-          <h4 class="card-title mb-0">General Buttons</h4>
+        <!-- <div class="p-3">
+          <h4 class="card-title mb-0">General Buttons</h4>          
+        </div>         -->
+        <div class="row p-3">
+          <div class="col"><h4 class="card-title mb-0">General Buttons</h4></div>
+          <div class="col"><button class="btn btn-info pull-right"   (click)="openModal(content)" style="margin-left:80%">Create</button>
+          </div>
         </div>
         <div class="card-body border-top">
-          <ngx-datatable class='bootstrap no-detail-row' [columnMode]="'force'" [footerHeight]="50" [rowHeight]="'auto'"    
+          <ngx-datatable class='bootstrap no-detail-row'  [columnMode]="'force'"  [footerHeight]="50" [rowHeight]="'auto'"    
           [rows]='rows' [count]="total_count" [limit]="rows.page_size">    
           <ngx-datatable-column name="Title 1" prop="title_line1"></ngx-datatable-column>    
           <ngx-datatable-column name="Title 2" prop="title_line2"></ngx-datatable-column>    
@@ -17,9 +22,8 @@
           <ngx-datatable-column name="Action" widht="600">    
               <ng-template let-row="row" let-expanded="expanded" ngx-datatable-cell-template>    
                   <div class="text-left">    
-                      <a title="Edit" class="mr-2" (click)="test('title_line1')">Edit</a>    
-                      <a title="Delete" href="javascript:void(0);"    
-                          >Delete</a>    
+                      <a title="Edit" class="mr-2" (click)="test('title_line1')">Edit</a> &nbsp; 
+                      <a title="Delete" href="javascript:void(0);"> &nbsp; Delete</a>    
                   </div>    
               </ng-template>    
           </ngx-datatable-column>    
@@ -31,3 +35,25 @@
       </div>
     </div>
 </div>
+
+
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Profiles update</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<form>
+			<div class="mb-3">
+				<label for="dateOfBirth">Date of birth</label>
+				<div class="input-group">
+					
+					<button class="btn btn-outline-secondary bi bi-calendar3" type="button"></button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+	</div>
+</ng-template>
