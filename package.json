@@ -36,6 +36,7 @@
     "rxjs-compat": "^6.5.4",
     "sass": "^1.29.0",
     "tslib": "1.10.0",
+    "uuid": "^9.0.0",
     "zone.js": "^0.11.4"
   },
   "devDependencies": {
