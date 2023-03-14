@@ -34,7 +34,13 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
+//import { MainComponent } from './home/main/main.component';
 //import { TableModule } from 'ngx-easy-table';
+import { IndexComponent } from './home/index/index/index.component';
+import { HeaderComponent } from './home/header/header.component';
+import { FooterComponent } from './home/footer/footer.component';
+import { BodyComponent } from './home/body/body.component';
+import { ProducedetailsComponent } from './home/producedetails/producedetails.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -60,6 +66,12 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     VerticalSidebarComponent,
     HorizontalNavigationComponent,
     HorizontalSidebarComponent,
+   // MainComponent,
+    IndexComponent,
+    HeaderComponent,
+    FooterComponent,
+    BodyComponent,
+    ProducedetailsComponent
     //LoginComponent
   ],
   imports: [

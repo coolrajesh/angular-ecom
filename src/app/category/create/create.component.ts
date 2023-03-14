@@ -14,6 +14,7 @@ export class CreateComponent implements OnInit {
   @Input() data:any;
   @Output() updatedData: EventEmitter<any> = new EventEmitter();
   categoryForm!: FormGroup;
+  submitted = false;
 
    data1:any;
   constructor(private formBuilder: FormBuilder,public activeModal: NgbActiveModal) {
@@ -46,5 +47,9 @@ export class CreateComponent implements OnInit {
   }
 
   get f() { return this.categoryForm.controls; }
+
+  submit(){
+    console.log(this.categoryForm.value)
+  }
 
 }
