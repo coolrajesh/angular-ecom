@@ -304,15 +304,19 @@
    
     <div class="modal-body loginmodal-container">
         <h1>Login to Your Account</h1><br>
-      <form>
-        <input type="text" name="user" placeholder="Username">
-          <input type="password" name="pass" placeholder="Password">
+      <form [formGroup]="loginForm">
+            <input type="text"  formControlName = "email" [ngClass]="{'is-invalid':f.email.errors, 'is-valid': !f.email.errors}" placeholder="Enter Email">
+            <span class="text-danger" *ngIf="(f.email.touched || f.email.dirty) && f.email.errors?.required">Email is required</span>
+            <!-- <span class="text-danger" *ngIf="(f.email.touched || f.email.dirty) && f.email.errors?.pattern">Invalid email</span> -->
+            <input type="password" formControlName = "password"  [ngClass]="{'is-invalid':f.password.errors, 'is-valid': !f.password.errors}" placeholder="Enter Password">
+            <span class="text-danger" *ngIf="(f.password.touched || f.password.dirty) && f.password.errors?.required">Password is required</span>
+            <!-- <span class="text-danger" *ngIf="(f.name.touched || f.name.dirty) && f.name.errors?.pattern">Invalid Name</span> -->
           <div class="row">
               <div class="col">
-                <input type="submit" name="login" class="btn btn-primary" value="Login">
+                <input type="submit" [disabled]="!loginForm.valid" (click)="doLogin()" name="login" class="btn btn-primary" value="Login">
               </div>
               <div class="col">
-                <input type="submit" name="cancel" class="btn btn-danger" value="Close" data-dismiss="modal">
+                <input type="submit" name="cancel" class="btn btn-danger"  value="Close" data-dismiss="modal">
               </div>
           </div> 
       </form>

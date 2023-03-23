@@ -4,7 +4,11 @@
 
 export const environment = {
   CI : false,
-  production: false
+  production: false,
+  apiProtocol:'http://',
+  apiHost:'localhost:3000/',
+  loginAPI:'signup',
+  
 };
 
 /*
