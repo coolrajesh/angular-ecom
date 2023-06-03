@@ -30,7 +30,7 @@ export const ROUTES: RouteInfo[] = [
     extralink: false,
     label: '',
     labelClass: '',
-    submenu: []
+    submenu: [],
   },
 
   // {

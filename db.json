@@ -20,18 +20,211 @@
     {
       "fname": "Manoj",
       "lname": "Adhikari",
-      "email": "manojadhikari@gmail.com",
+      "email": "admin",
       "phone": "234324234",
-      "password": "Test@123",
+      "password": "admin",
       "id": 1
     },
     {
       "fname": "shivam",
       "lname": "adhikari",
-      "email": "shivamadhikari@gmail.com",
+      "email": "hello@gmail.com",
       "phone": "32432",
       "password": "Test@123",
       "id": 2
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Mobile"
+    },
+    {
+      "id": 1,
+      "name": "Book"
+    },
+    {
+      "id": 1,
+      "name": "Watch"
+    },
+    {
+      "id": 4,
+      "name": "Laptop"
+    }
+  ],
+  "contact": [
+    {
+      "contactDetails": [
+        {
+          "aboutUs": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al iqua. Ut enim",
+          "contactNo": "+1258 3258 5679",
+          "emailId": "hello@workik.com",
+          "address": "102 street, y cross 485656"
+        }
+      ],
+      "submitData": []
+    }
+  ],
+  "savecontact": [
+    {
+      "name": "Rajesh roy",
+      "email": "rajesh@gmail.com",
+      "phone": "7827162410",
+      "query": "test",
+      "id": 1
+    },
+    {
+      "name": "Rajesh roy",
+      "email": "rajesh@gmail.com",
+      "phone": "7827162410",
+      "query": "test",
+      "id": 2
+    },
+    {
+      "name": "Rajesh roy",
+      "email": "rajesh@gmail.com",
+      "phone": "7827162410",
+      "query": "test",
+      "id": 3
+    },
+    {
+      "name": "Rajesh roy",
+      "email": "rajesh@gmail.com",
+      "phone": "7827162410",
+      "query": "test",
+      "id": 4
+    },
+    {
+      "name": "Rajesh roy",
+      "email": "rajesh@gmail.com",
+      "phone": "7827162410",
+      "query": "test",
+      "id": 5
+    },
+    {
+      "name": "Rajesh roy",
+      "email": "rajesh@gmail.com",
+      "phone": "7827162410",
+      "query": "test",
+      "id": 6
+    },
+    {
+      "name": "Rajesh roy",
+      "email": "rajesh@gmail.com",
+      "phone": "7827162410",
+      "query": "test",
+      "id": 7
+    },
+    {
+      "name": "Rajesh roy",
+      "email": "rajesh@gmail.com",
+      "phone": "7827162410",
+      "query": "test",
+      "id": 8
+    },
+    {
+      "name": "Rajesh roy",
+      "email": "rajesh@gmail.com",
+      "phone": "7827162410",
+      "query": "test",
+      "id": 9
+    },
+    {
+      "name": "Rajesh roy",
+      "email": "rajesh@gmail.com",
+      "phone": "7827162410",
+      "query": "test",
+      "id": 10
+    },
+    {
+      "name": "Rajesh roy",
+      "email": "rajesh@gmail.com",
+      "phone": "7827162410",
+      "query": "test",
+      "id": 11
+    },
+    {
+      "name": "Rajesh roy",
+      "email": "rajesh@gmail.com",
+      "phone": "7827162410",
+      "query": "test",
+      "id": 12
+    },
+    {
+      "name": "Rajesh roy",
+      "email": "rajesh@gmail.com",
+      "phone": "7827162410",
+      "query": "test",
+      "id": 13
+    },
+    {
+      "name": "Rajesh roy",
+      "email": "rajesh@gmail.com",
+      "phone": "7827162410",
+      "query": "test",
+      "id": 14
+    },
+    {
+      "name": "Rajesh roy",
+      "email": "rajesh@gmail.com",
+      "phone": "7827162410",
+      "query": "test",
+      "headers": {
+        "Authorization": "@3%#887898768686868!",
+        "My-Custom-Header": "foobar"
+      },
+      "id": 15
+    },
+    {
+      "name": "Rajesh roy",
+      "email": "rajesh@gmail.com",
+      "phone": "7827162410",
+      "query": "test",
+      "headers": {
+        "Authorization": "@3%#887898768686868!",
+        "My-Custom-Header": "foobar"
+      },
+      "id": 16
+    },
+    {
+      "name": "Rajesh roy",
+      "email": "rajesh@gmail.com",
+      "phone": "7827162410",
+      "query": "test",
+      "headers": {
+        "Authorization": "@3%#887898768686868!",
+        "My-Custom-Header": "foobar"
+      },
+      "id": 17
+    },
+    {
+      "name": "Rajesh roy",
+      "email": "rajesh@gmail.com",
+      "phone": "7827162410",
+      "query": "test",
+      "headers": {
+        "Authorization": "@3%#887898768686868!",
+        "My-Custom-Header": "foobar"
+      },
+      "id": 18
+    },
+    {
+      "name": "Rajesh roy",
+      "email": "rajesh@gmail.com",
+      "phone": "7827162410",
+      "query": "test",
+      "headers": {
+        "Authorization": "@3%#887898768686868!",
+        "My-Custom-Header": "foobar"
+      },
+      "id": 19
+    },
+    {
+      "name": "Rajesh k roy",
+      "email": "rajesh@gmail.com",
+      "phone": "7827162410",
+      "query": "test",
+      "id": 20
     }
   ]
 }

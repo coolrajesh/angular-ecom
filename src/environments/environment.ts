@@ -8,6 +8,9 @@ export const environment = {
   apiProtocol:'http://',
   apiHost:'localhost:3000/',
   loginAPI:'signup',
+  contactUsAPI:'contact',
+  //submitAPI:'contact',
+  saveContactAPI:'savecontact'
   
 };
 

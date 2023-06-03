@@ -5,6 +5,10 @@ import { Routes, RouterModule } from '@angular/router';
 // import { BlankComponent } from './layouts/blank/blank.component';
 // import {LoginComponent } from './authentication/login/login.component';
 // import { MainComponent } from './home/main/main.component';
+import { AboutusComponent } from './home/aboutus/aboutus.component';
+import { ContactComponent } from './home/contact/contact.component';
+import { RegisterComponent } from './home/register/register.component';
+
 
 export const Approutes: Routes = [
   {
@@ -31,13 +35,31 @@ export const Approutes: Routes = [
       {
         path: 'component',
         loadChildren: () => import('./component/component.module').then(m => m.ComponentsModule)
-      }
+      },
+      {
+        path: 'error',
+        loadChildren: () => import('./authentication/authentication.module').then(m => m.AuthenticationModule)
+      },
     ]
+  },  
+
+  {
+    path:'about-us',
+    component:AboutusComponent
   },
-  // {
-  //   path: '**',
-  //   redirectTo: '/starter'
-  // }
+  {
+    path:'contact-us',
+    component:ContactComponent
+  },
+  {
+    path:'register.html',
+    component:RegisterComponent
+  },
+
+  {
+    path: '**',
+    redirectTo: '/error/404'
+  },
 
   // {
   //   path:'login',
@@ -47,8 +69,8 @@ export const Approutes: Routes = [
   //   path:'home',
   //   //component:MainComponent
   // }
-  {
-    path: '**',
-    redirectTo: '/starter'
-  }
+  // {
+  //   path: '**',
+  //   redirectTo: '/404'
+  // }
 ];

@@ -37,9 +37,9 @@
                 <div class="col-lg-4 col-md-4 col-12">
                     <div class="top-middle">
                         <ul class="useful-links">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about-us.html">About Us</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="javascript:void(0)" [routerLink]="[]">Home</a></li>
+                            <li><a href="javascript:void(0)" [routerLink]="['/about-us']">About Us</a></li>
+                            <li><a href="javascript:void(0)" [routerLink]="['/contact-us']">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                             </li>
                             
                             <li>
-                                <a href="register.html">Register</a>
+                                <a href="javascript:void(0)" [routerLink]="['/register.html']">Register</a>
                             </li>
                         </ul>
                     </div>
@@ -301,9 +301,11 @@
 </header>
 
 <ng-template #content let-modal>
-   
-    <div class="modal-body loginmodal-container">
-        <h1>Login to Your Account</h1><br>
+    <div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Login to Your Account</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+    <div class="modal-body loginmodal-container">     
       <form [formGroup]="loginForm">
             <input type="text"  formControlName = "email" [ngClass]="{'is-invalid':f.email.errors, 'is-valid': !f.email.errors}" placeholder="Enter Email">
             <span class="text-danger" *ngIf="(f.email.touched || f.email.dirty) && f.email.errors?.required">Email is required</span>
@@ -311,17 +313,20 @@
             <input type="password" formControlName = "password"  [ngClass]="{'is-invalid':f.password.errors, 'is-valid': !f.password.errors}" placeholder="Enter Password">
             <span class="text-danger" *ngIf="(f.password.touched || f.password.dirty) && f.password.errors?.required">Password is required</span>
             <!-- <span class="text-danger" *ngIf="(f.name.touched || f.name.dirty) && f.name.errors?.pattern">Invalid Name</span> -->
+        </form>
           <div class="row">
               <div class="col">
-                <input type="submit" [disabled]="!loginForm.valid" (click)="doLogin()" name="login" class="btn btn-primary" value="Login">
+                
               </div>
-              <div class="col">
-                <input type="submit" name="cancel" class="btn btn-danger"  value="Close" data-dismiss="modal">
-              </div>
-          </div> 
-      </form>
+              <!-- <div class="col">
+                <button type="button" name="cancel" class="btn btn-danger" (click)="modal.dismiss('Cross click')"  value="Close">Close</button>
+              </div> -->
+          </div>
     </div>
-   
+    <div class="modal-footer">
+		<input type="submit" [disabled]="!loginForm.valid" (click)="login()" name="login" class="btn btn-primary"  value="Login">
+        <button type="button" name="cancel" id="cancel" class="btn btn-danger" (click)="modal.dismiss('Cross click')" style = "margin-right:150px"  value="Close">Close</button>
+	</div>   
   </ng-template>
   
   

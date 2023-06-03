@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 import {
   CommonModule
 } from '@angular/common';
@@ -7,6 +8,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FeatherModule } from 'angular-feather';
@@ -35,12 +37,15 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
 //import { MainComponent } from './home/main/main.component';
-//import { TableModule } from 'ngx-easy-table';
+
 import { IndexComponent } from './home/index/index/index.component';
 import { HeaderComponent } from './home/header/header.component';
 import { FooterComponent } from './home/footer/footer.component';
 import { BodyComponent } from './home/body/body.component';
 import { ProducedetailsComponent } from './home/producedetails/producedetails.component';
+import { AboutusComponent } from './home/aboutus/aboutus.component';
+import { ContactComponent } from './home/contact/contact.component';
+import { RegisterComponent } from './home/register/register.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -71,7 +76,10 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     HeaderComponent,
     FooterComponent,
     BodyComponent,
-    ProducedetailsComponent
+    ProducedetailsComponent,
+    AboutusComponent,
+    ContactComponent,
+    RegisterComponent
     //LoginComponent
   ],
   imports: [
@@ -86,8 +94,12 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     FeatherModule.pick(allIcons),
     RouterModule.forRoot(Approutes),
     PerfectScrollbarModule,
-    HttpClientModule,
-    //TableModule,    
+    HttpClientModule,    
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      positionClass: 'toast-top-center',
+      preventDuplicates: true,
+    }),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
