@@ -3,18 +3,19 @@
 		<h4 class="modal-title" id="modal-basic-title">Lock Component</h4>
 		<button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
 	</div>
-	<div class="modal-body fade">
-      
-		<form>
-			<div class="mb-3">
-				<label for="dateOfBirth">Date of birth</label>
-                
-				<div class="input-group">
-					
-					
-				</div>
-			</div>
-		</form>
+	<div class="modal-body fade">      
+        <form class="form-horizontal mt-3" action="index.html">
+            <div class="mb-3 row">
+                <div class="col-12">
+                    <input class="form-control form-control-lg" type="password" required="" placeholder="Password">
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="col-xs-12">
+                    <button class="btn d-block w-100 btn-lg btn-info" type="submit">LOGIN</button>
+                </div>
+            </div>
+        </form>
 	</div>
 	<div class="modal-footer">
 		<button type="button" class="btn btn-outline-dark"(click)="goBack()" >Save</button>

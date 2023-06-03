@@ -46,6 +46,11 @@
 @import '~@swimlane/ngx-datatable/index.css';
 //@import '~@swimlane/ngx-datatable/themes/material.scss';
 @import '~@swimlane/ngx-datatable/assets/icons.css';
+@import "../../assets/css/bootstrap.min.css";
+@import "../../assets/css/glightbox.min.css";
+//@import "../../assets/css/LineIcons.3.0.css";
+@import "../../assets/css/main.css";
+@import "../../assets/css/tiny-slider.css";
 
 .ngx-datatable .datatable-body-cell {
    //border-left: 1px solid black;
@@ -153,4 +158,6 @@
    
  }
 
- 
+ #toast-container > div {
+      width: 400px;   
+   }

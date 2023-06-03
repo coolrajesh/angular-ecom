@@ -1,7 +1,12 @@
 import { Component, AfterViewInit, EventEmitter, Output } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';  
+import { Router } from '@angular/router';
+import { AuthenticationService } from '../../services/authentication.service';  
+import { ToastrService } from 'ngx-toastr';
+
+
 
 declare var $: any;
 
@@ -16,10 +21,8 @@ export class VerticalNavigationComponent implements AfterViewInit {
 
   public showSearch = false;
 
-  constructor(private modalService: NgbModal, private translate: TranslateService) {
-
-    translate.setDefaultLang('en');
-
+  constructor(private modalService: NgbModal, private translate: TranslateService,private router: Router,private auth:AuthenticationService,private toastr: ToastrService) {
+    translate.setDefaultLang('en');    
   }
 
   // This is for Notifications
@@ -121,4 +124,12 @@ export class VerticalNavigationComponent implements AfterViewInit {
     this.translate.use(lang.code)
     this.selectedLanguage = lang;
   }
+
+  logout(){
+    this.auth.logout();  
+    this.toastr.success('Logout Successfully', '',{closeButton:true});
+    this.router.navigate(['']); 
+  }
+  
 }
+
